@@ -1,0 +1,60 @@
+<resources>
+     <string name="app_name">Rural Maps</string>
+     <string name="action_settings">Settings</string>
+     <string name="salvar">Salvar</string>
+     <string name ="voltar">Voltar</string>
+     <string name ="sair">Sair</string>
+     <string name ="fechar">Fechar</string>
+     <string name="usuarios">Usuários</string>
+
+     <string name="img_content_description"/>
+
+     <!-- mensagens da tela-->
+     <string name="login_auth_ok">Autenticação Válida!</string>
+     <string name="login_auth_deny">Login e/ou senha incorretos</string>
+    
+     <!-- mensagens de validacao-->
+     <string name="login_user_required">Campo login obrigatório!</string>
+     <string name="login_password_required">Campo senha obrigatório!</string>
+     <string name="email_required">Campo E-mail obrigatório!</string>
+     <string name="nome_required">Campo Nome obrigatório!</string>
+     <string name="login_user_size_invalid">Seu login deve ter entre 4 e 15 caracteres!</string>
+     <string name="login_pass_size_invalid">Sua senha deve ter entre 6 e 15 caracteres!</string>
+     <string name="login_user_has_space">Login Inválido</string>
+     <string name="campo_obrigatorio">Campo Obrigatório</string>
+     <string name="cadastro_concluido">Usuário Cadastrado com sucesso!!</string>
+     <string name="cadastro_atualizado">Usuário Atualizado</string>
+     <string name="cadastro_erro">Erro ao cadastrar</string>
+     <string name="cadastro_email_invalido">E-mail inválido</string>
+     <string name="cadastro_login_invalido">Login já existente</string>
+
+     <!-- caixas e botoes -->
+     <string name="login_edt_user_hint">login</string>
+     <string name="login_edt_password_hint">senha</string>
+     <string name="login_lbl_user">Login:</string>
+     <string name="login_lbl_password">Senha:</string>
+     <string name="login_btn_enter_value">Entrar</string>
+     <string name="login_btn_cadastro_value">Cadastrar</string>
+     <string name="maps_btn_revogar">Revogar acesso</string>
+     <string name="login_checkbox_conectado">Manter conectado</string>
+
+     <string name="title_activity_mapa">MapaActivity</string>
+
+    <string name="hello_maps">Mapa aqui</string>
+
+    <!-- Itens do menu -->
+    <string name="logout">Logout</string>
+
+    <string name="fale_conosco">Fale Conosco</string>
+    <string name="title_activity_cadastro_usuario">CadastroUsuarioActivity</string>
+
+    <!-- Usuarios -->
+
+    <string name="usuario_texto_nome">Nome</string>
+    <string name="usuario_texto_login">Login</string>
+    <string name="usuario_texto_senha">Senha</string>
+    <string name="usuario_texto_email">Email</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_maps">Mapa</string>
+</resources>
