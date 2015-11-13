@@ -14,11 +14,18 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.plus.Plus;
+import com.mpoo.ruralmaps.ruralmaps.Placemark;
 import com.mpoo.ruralmaps.ruralmaps.R;
 
+import java.io.InputStream;
+import java.util.ArrayList;
+
+import negocio.ParserKML;
+import negocio.SessaoUsuario;
 import negocio.UsuarioNegocio;
 
 
@@ -63,7 +70,6 @@ public class MapsActivity extends FragmentActivity {
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
                 setUpMap();
-                setUpMap2();
             }
         }
     }
@@ -75,12 +81,31 @@ public class MapsActivity extends FragmentActivity {
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
     private void setUpMap() {
-        mMap.addMarker(new MarkerOptions().position(new LatLng(-8.0144, -34.95061)).title("UFRPE"));
+        InputStream mapa = getResources().openRawResource(R.raw.ruralmaps);
+
+        try {
+
+            SessaoUsuario sessaoUsuario = SessaoUsuario.getSessao();
+            ArrayList<Placemark> lista =  ParserKML.getPlaces(mapa);
+            for (Placemark place : lista) {
+                MarkerOptions mo = new MarkerOptions();
+                LatLng position = new LatLng(place.getCoordinates().latitude, place.getCoordinates().longitude);
+
+                mo.title(place.getName());
+                mo.snippet(place.getDescription());
+                mo.icon(BitmapDescriptorFactory.fromResource(ParserKML
+                        .loadMapOfIcons(place.getIconID())));
+                mo.position(position);
+
+                sessaoUsuario.putPlaceMarks(place, mo);
+                mMap.addMarker(mo);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
-                new LatLng(-8.0144, -34.95061), 18));
-    }
-    private void setUpMap2(){
-        mMap.addMarker(new MarkerOptions().position(new LatLng(-8.01778, -34.94428)).title("CEAGRI I"));
+                new LatLng(-8.0144, -34.95061), 15));
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

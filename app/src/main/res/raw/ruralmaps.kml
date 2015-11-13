@@ -1,0 +1,1520 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>RURAL MAPS</name>
+		<description><![CDATA[]]></description>
+		<Folder>
+			<name>Prédios</name>
+			<Placemark>
+				<name>Biblioteca Central</name>
+				<styleUrl>#icon-985-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9490359,-8.0136736,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DCE</name>
+				<description><![CDATA[Diretório Central dos Estudantes]]></description>
+				<styleUrl>#icon-1037</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9513775,-8.0144411,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Biologia</name>
+				<styleUrl>#icon-1037-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9505675,-8.0136921,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>CEGOE</name>
+				<styleUrl>#icon-1037-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9500726,-8.0173163,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>CEAGRI 1</name>
+				<styleUrl>#icon-1037-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9442804,-8.017785,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>CEAGRI 2</name>
+				<description><![CDATA[<img src="http://mictecinformatica.com/wp-content/uploads/2013/02/computadores.jpg" height="200" width="auto" /><br><br>]]></description>
+				<styleUrl>#icon-1037</styleUrl>
+				<ExtendedData>
+					<Data name='gx_media_links'>
+						<value>http://mictecinformatica.com/wp-content/uploads/2013/02/computadores.jpg</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.94431530000001,-8.0175513,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Casa de Estudantes</name>
+				<styleUrl>#icon-1035-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.94411680000001,-8.0162897,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Casa de Estudantes (Feminina)</name>
+				<styleUrl>#icon-1035-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9511227,-8.0168368,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Casa de Estudantes (Homens)</name>
+				<styleUrl>#icon-1035-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9475285,-8.0152937,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>PAPE</name>
+				<description><![CDATA[Programa de Associativismo para Pesquisa, Ensino e Extensão]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9493551,-8.0183454,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Hospital Veterinário</name>
+				<styleUrl>#icon-1205-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.94875200000001,-8.014627000000003,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Laboratórios de Química</name>
+				<styleUrl>#icon-1127-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9513641,-8.0153017,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Laboratório de Piscicultura Marinha</name>
+				<styleUrl>#icon-1127-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9437252,-8.0198195,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Laboratório Gastronomia</name>
+				<styleUrl>#icon-1127-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9440283,-8.0184145,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Laboratório de Zoologia</name>
+				<styleUrl>#icon-1127-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.950379700000006,-8.0133521,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Laboratório de solos
+</name>
+				<styleUrl>#icon-1127-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9453157,-8.0168421,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Viveiro de Eng. Florestal</name>
+				<styleUrl>#icon-1157-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9457127,-8.0180984,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>??</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9502188,-8.0165447,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>???2</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9504843,-8.017283,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>??</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9452406,-8.0200081,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>??</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9495858,-8.0169457,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>???</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.949854,-8.0162977,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ponto 31</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9450797,-8.0173733,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Diretoria Depto Agronomia
+</name>
+				<description><![CDATA[*Detalhar localização]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9454793,-8.0173893,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Necrópsia ?</name>
+				<styleUrl>#icon-1205-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9482581,-8.0156496,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>CENAPESQ</name>
+				<description><![CDATA[Centro de Apoio á Pesquisa]]></description>
+				<styleUrl>#icon-1037</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.95043599999997,-8.017563,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Departamentos</name>
+			<Placemark>
+				<name>DRCA</name>
+				<description><![CDATA[Diretório Central Acadêmico]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9507096,-8.0142286,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEPAq</name>
+				<description><![CDATA[Prédio Yoshito Motohashi]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9438432,-8.019445,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEPAq - Galpão</name>
+				<styleUrl>#icon-1197-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9437144,-8.0199735,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEFIS</name>
+				<description><![CDATA[Departamento de Educação Física]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9491996,-8.0181861,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DEINFO</name>
+				<description><![CDATA[Departamento de Estatística e Informática]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9511173,-8.0161224,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>ACI</name>
+				<description><![CDATA[Térreo - Sala ?]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.949567,-8.0172485,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Departamento de Matemática e Física</name>
+				<styleUrl>#icon-1197-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.951197999999984,-8.016048,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Departamento De Zootecnia</name>
+				<description><![CDATA[Diretor: Professor Wilson Moreira Dutra Júnior.<br>Fone: 3320.6550.<br>E-Mail: diretoria@dz.ufrpe.br]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.954199,-8.02009,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Departamento de Engenharia de Pesca</name>
+				<description><![CDATA[Qual a sigla??]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9497655,-8.0166961,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Dep. Ciência Florestal </name>
+				<styleUrl>#icon-1197-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.945761,-8.0170281,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Departamento de Veterinária
+</name>
+				<description><![CDATA[Diretor: Prof. Lúcio Esmeraldo Honório de Melo<br>Vice-diretora: Rita de Cassia Carvalho Maia<br>E-Mail:diretoria@dmv.ufrpe.br]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9480784,-8.0150148,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DQV</name>
+				<description><![CDATA[Departamento de Qualidade de Vida]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.947837,-8.0136656,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>PROEXT</name>
+				<description><![CDATA[Pró-reitoria de Extensão]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9472898,-8.0144995,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DLCH</name>
+				<description><![CDATA[Departamento de Letras e Ciências Humanas]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9499519,-8.0187598,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>DTR</name>
+				<description><![CDATA[Departamento de Tecnologia da Rural]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9453586,-8.0171423,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>PROGEST</name>
+				<description><![CDATA[*Detalhar o andar e número da sala.                         Pró-Reitoria de Gestão Estudantil]]></description>
+				<styleUrl>#icon-1197</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.94797400000001,-8.0138687,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Paradas de Ônibus</name>
+			<Placemark>
+				<name>Prédio Central e CEGOE</name>
+				<description><![CDATA[Sentido: Av. Caxangá - Macaxeira]]></description>
+				<styleUrl>#icon-1423</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9501182,-8.0159046,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Prédio Central e CEGOE</name>
+				<description><![CDATA[Sentido: Macaxeira -  Av. Caxangá]]></description>
+				<styleUrl>#icon-1423</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.95105160000001,-8.0164942,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Veterinária</name>
+				<styleUrl>#icon-1423-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9474159,-8.0149458,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>CEAGRI / LAFEPE</name>
+				<styleUrl>#icon-1423-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9435803,-8.0159125,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Praça Dois Irmãos</name>
+				<description><![CDATA[Sentido: Macaxeira - Av. Caxangá]]></description>
+				<styleUrl>#icon-1423</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9440068,-8.01587,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Zootecnia</name>
+				<description><![CDATA[Sentido: Av. Caxangá - Macaxeira]]></description>
+				<styleUrl>#icon-1423</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9549609,-8.0204729,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Zootecnia</name>
+				<description><![CDATA[Sentido: Macaxeira - Av. Caxangá]]></description>
+				<styleUrl>#icon-1423</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9547732,-8.0199921,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Biblioteca</name>
+				<description><![CDATA[Sentido: Macaxeira - Av. Caxangá]]></description>
+				<styleUrl>#icon-1423</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9482313,-8.014074600000002,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Esportes</name>
+			<Placemark>
+				<name>Campo de Futebol e Rugby</name>
+				<description><![CDATA[Prédio Central - UFRPE]]></description>
+				<styleUrl>#icon-1389</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.949972,-8.0146695,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Pista de atletismo</name>
+				<description><![CDATA[Prédio Central - UFRPE]]></description>
+				<styleUrl>#icon-1469</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9502027,-8.0145739,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Quadra Poliesportiva Descoberta</name>
+				<styleUrl>#icon-1353-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9493578,-8.0142393,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Quadra de Vôlei Descoberta</name>
+				<description><![CDATA[Prédio Central - UFRPE]]></description>
+				<styleUrl>#icon-1353</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9503958,-8.0152167,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Piscina</name>
+				<description><![CDATA[<img src="http://www.celebspe.com.br/wp-content/uploads/2013/07/UFRPe-Piscina.jpg" height="200" width="auto" /><br><br>]]></description>
+				<styleUrl>#icon-1395</styleUrl>
+				<ExtendedData>
+					<Data name='gx_media_links'>
+						<value>http://www.celebspe.com.br/wp-content/uploads/2013/07/UFRPe-Piscina.jpg</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9504481,-8.0156669,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Quadra Poliesportiva Coberta</name>
+				<styleUrl>#icon-1353-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9493028,-8.0178939,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Trajetos</name>
+		</Folder>
+		<Folder>
+			<name>Caixas Eletrônicos</name>
+			<Placemark>
+				<name>Banco Santander</name>
+				<styleUrl>#icon-971-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.951234,-8.0143123,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bradesco</name>
+				<styleUrl>#icon-971-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9508598,-8.0141277,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Banco 24h</name>
+				<styleUrl>#icon-971-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.950027,-8.0172538,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Caixa</name>
+				<styleUrl>#icon-971-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.950086,-8.0172365,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Outros</name>
+			<Placemark>
+				<name>Quadra DCE</name>
+				<description><![CDATA[Famosas calouradas]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9512635,-8.0140613,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>SINTUFEPE</name>
+				<description><![CDATA[Sindicato dos Trabalhadores das Universidades Federais de Pernambuco]]></description>
+				<styleUrl>#icon-1037</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9509135,-8.0171555,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>APUFRPE</name>
+				<description><![CDATA[Antigo Mesa Farta]]></description>
+				<styleUrl>#icon-1037</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.945356,-8.0178992,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Praça do CEGOE</name>
+				<styleUrl>#icon-503-DB4436-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9495885,-8.0177027,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Bosque</name>
+				<styleUrl>#icon-1379-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9493096,-8.0184716,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Xerox</name>
+				<description><![CDATA[Prédio Central]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9507955,-8.015206,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Ead da UFRPE
+</name>
+				<styleUrl>#icon-1197-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.95109320000001,-8.015477,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>UFRPE - Universidade Federal Rural de Pernambuco</name>
+				<description><![CDATA[<img src="http://www.integracaope.com.br/wp-content/uploads/2011/11/UFRPE1-308x198.jpg" height="200" width="auto" /><br><br>]]></description>
+				<styleUrl>#icon-503-DB4436</styleUrl>
+				<ExtendedData>
+					<Data name='gx_media_links'>
+						<value>http://www.integracaope.com.br/wp-content/uploads/2011/11/UFRPE1-308x198.jpg</value>
+					</Data>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.95061199999998,-8.014408,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Comida</name>
+			<Placemark>
+				<name>Bar da Curva</name>
+				<styleUrl>#icon-1085-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.945362999999986,-8.015957,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Restaurante Universitário UFRPE</name>
+				<styleUrl>#icon-1085-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.951119000000006,-8.014041,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Espaço Vivência</name>
+				<description><![CDATA[Agronomia]]></description>
+				<styleUrl>#icon-1085</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.9452581,-8.017681400000003,0.0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>Lanchonete DCE</name>
+				<styleUrl>#icon-1085-nodesc</styleUrl>
+				<ExtendedData>
+				</ExtendedData>
+				<Point>
+					<coordinates>-34.951458,-8.0143057,0.0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Style id='icon-1035-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1035-biz-hotel.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1035-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1035-biz-hotel.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1035-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1035-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1035-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1037-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1037-biz-house.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1037-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1037-biz-house.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1037'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1037-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1037-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1037-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1037-biz-house.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1037-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1037-biz-house.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1037-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1037-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1037-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1085-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1085-biz-restaurant-generic.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1085-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1085-biz-restaurant-generic.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1085'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1085-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1085-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1085-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1085-biz-restaurant-generic.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1085-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1085-biz-restaurant-generic.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1085-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1085-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1085-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1127-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1127-crisis-chemical.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1127-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1127-crisis-chemical.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1127-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1127-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1127-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1157-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1157-crisis-infestation-rodents.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1157-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1157-crisis-infestation-rodents.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1157-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1157-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1157-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1197-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1197-fac-headquarters.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1197-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1197-fac-headquarters.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1197'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1197-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1197-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1197-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1197-fac-headquarters.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1197-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1197-fac-headquarters.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1197-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1197-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1197-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1205-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1205-fac-medical.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1205-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1205-fac-medical.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1205-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1205-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1205-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1353-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1353-rec-basketball.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1353-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1353-rec-basketball.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1353'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1353-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1353-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1353-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1353-rec-basketball.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1353-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1353-rec-basketball.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1353-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1353-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1353-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1379-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1379-rec-park.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1379-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1379-rec-park.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1379-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1379-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1379-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1389-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1389-rec-soccer.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1389-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1389-rec-soccer.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1389'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1389-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1389-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1395-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1395-rec-swim.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1395-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1395-rec-swim.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1395'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1395-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1395-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1423-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1423-trans-bus.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1423-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1423-trans-bus.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1423'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1423-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1423-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1423-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1423-trans-bus.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-1423-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1423-trans-bus.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-1423-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1423-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1423-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-1469-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1469-trans-walking.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-1469-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1469-trans-walking.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-1469'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-1469-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-1469-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-503-DB4436-normal'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+		</Style>
+		<Style id='icon-503-DB4436-highlight'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+		</Style>
+		<StyleMap id='icon-503-DB4436'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-503-DB4436-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-503-DB4436-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-503-DB4436-nodesc-normal'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-503-DB4436-nodesc-highlight'>
+			<IconStyle>
+				<color>ff3644DB</color>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+				</Icon>
+				<hotSpot x='16' y='31' xunits='pixels' yunits='insetPixels'>
+				</hotSpot>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-503-DB4436-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-503-DB4436-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-503-DB4436-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-971-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/971-biz-bank-dollar.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-971-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/971-biz-bank-dollar.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-971-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-971-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-971-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='icon-985-nodesc-normal'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/985-biz-book.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='icon-985-nodesc-highlight'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/985-biz-book.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>1.1</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='icon-985-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#icon-985-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#icon-985-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>
