@@ -341,7 +341,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
         }
     }
 
-    private void revokeAccess(){
+    public void revokeAccess(){
         Plus.AccountApi.clearDefaultAccount(googleApiClient);
         Plus.AccountApi.revokeAccessAndDisconnect(googleApiClient).setResultCallback
                 (new ResultCallback<Status>() {

@@ -52,11 +52,11 @@ public class MapsActivity extends FragmentActivity {
                 if (status == 1) {
                     changeType(v);
                     testButton.setText("Normal");
-                    v.setTag(0); //pause
+                    v.setTag(0);
                 } else {
                     changeType(v);
                     testButton.setText("Satelite");
-                    v.setTag(1); //pause
+                    v.setTag(1);
                 }
             }
         });
@@ -142,7 +142,9 @@ public class MapsActivity extends FragmentActivity {
     }
 
     private void logout() {
-        Log.i("SCRIPT", "=====ENTREI NO ELSE!================================================");
+/*        if(LoginActivity.instancia().getGoogleApiClient().isConnected()) {
+            LoginActivity.instancia().revokeAccess();
+        }*/
         SharedPreferences preferences = getSharedPreferences("LoginActivityPreferences",
                 Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
