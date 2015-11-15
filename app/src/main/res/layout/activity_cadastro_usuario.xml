@@ -20,13 +20,17 @@
         android:id="@+id/cadastro_edt_Nome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/usuario_edt_nome"
+        android:singleLine="true"
+        android:maxLength="15"
+        android:imeOptions="actionNext"
         />
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/usuario_texto_login"
+        android:text="@string/login_lbl_user"
         android:layout_marginTop="10dp"
         android:textStyle="bold"/>
 
@@ -34,6 +38,10 @@
         android:id="@+id/cadastro_edt_Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/login_edt_user_hint"
+        android:singleLine="true"
+        android:maxLength="15"
+        android:imeOptions="actionNext"
         />
 
         <TextView
@@ -47,12 +55,15 @@
             android:id="@+id/cadastro_edt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="@string/usuario_edt_email"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
             />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/usuario_texto_senha"
+        android:text="@string/login_lbl_password"
         android:layout_marginTop="10dp"
         android:textStyle="bold"/>
 
@@ -60,7 +71,11 @@
         android:id="@+id/cadastro_edt_Senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:hint="@string/login_edt_password_hint"
+        android:singleLine="true"
+        android:maxLength="15"
+        android:imeOptions="actionDone"/>
 
     <Button
         android:id="@+id/cadastro_btn_cadastrar"

@@ -88,6 +88,7 @@ public class CadastroUsuarioActivity extends Activity implements View.OnClickLis
                         GuiUtil.Msg(this, getString(R.string.cadastro_erro));
                     } else {
                         GuiUtil.Msg(this, getString(R.string.cadastro_concluido));
+                        chamarLoginActivity();
                     }
                 } else {
                     GuiUtil.Msg(this, getString(R.string.cadastro_email_invalido));
@@ -123,6 +124,9 @@ public class CadastroUsuarioActivity extends Activity implements View.OnClickLis
         return super.onOptionsItemSelected(item);
     }
 
+    private void chamarLoginActivity(){
+        startActivity(new Intent(this, LoginActivity.class));
+    }
 
     private void initViews() {
         resources = getResources();
