@@ -24,6 +24,7 @@
      <string name="cadastro_erro">Erro ao cadastrar</string>
      <string name="cadastro_email_invalido">E-mail inválido</string>
      <string name="cadastro_login_invalido">Login já existente</string>
+    <string name="sem_internt">Sem conexão com a internet</string>
 
      <!-- caixas e botoes -->
      <string name="login_lbl_user">Login:</string>
@@ -52,7 +53,9 @@
     <string name="usuario_edt_email">e-mail</string>
     <string name="usuario_texto_email">E-mail:</string>
 
-    <!-- Mapa -->
+    <!-- Google + -->
+    <string name="acesso_revogado">Acesso Revogado</string>
+    <string name="conectar_google">Conta Google+ deve estar conectada</string>
 
--
+
 </resources>

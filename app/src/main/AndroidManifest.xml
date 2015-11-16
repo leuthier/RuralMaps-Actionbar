@@ -7,18 +7,18 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
-    <!-- Google Maps Android API -->
+    <!-- Google Maps Android API   -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <!-- Google Plus Android API -->
+    <!-- Google Plus Android API   -->
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light" >
         <activity
@@ -26,7 +26,6 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -44,10 +43,6 @@
 
         <activity
             android:name="gui.MapsActivity"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="gui.TelaSplashActivity"
             android:label="@string/app_name" >
         </activity>
     </application>
