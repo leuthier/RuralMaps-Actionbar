@@ -9,7 +9,9 @@ import java.util.Map;
 
 public class SessaoUsuario {
     private Usuario usuarioLogado;
+
     private static final SessaoUsuario sessao = new SessaoUsuario();
+
     private Map<Placemark,MarkerOptions> placemarks = new HashMap<Placemark,MarkerOptions>();
 
     public static SessaoUsuario getSessao(){
@@ -19,6 +21,7 @@ public class SessaoUsuario {
     public void setUsuarioLogado(Usuario usuario){
         this.usuarioLogado = usuario;
     }
+
     public void putPlaceMark(Placemark pm, MarkerOptions mo) {
         placemarks.put(pm,mo);
 

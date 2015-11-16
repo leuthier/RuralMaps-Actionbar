@@ -65,6 +65,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
         setContentView(R.layout.activity_login);
         initViews();
 
+
         googleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
@@ -141,6 +142,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
                 editor.putBoolean(MANTER_CONECTADO, true);
                 editor.commit();
                 }
+                finish();
                 chamarMapsActivity();
         }else {
             GuiUtil.Msg(this, getString(R.string.login_auth_deny));
@@ -155,7 +157,9 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
                 startActivity(new Intent(this, CadastroUsuarioActivity.class));
                 break;
             case R.id.login_btn_enter:
-                if (validateFields()){
+                if (!conexaoInternetOk()){
+                    GuiUtil.Msg(this, getString(R.string.sem_internt));
+                }else if (validateFields()){
                     logar(v);
                 }
                 break;
@@ -165,16 +169,16 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
                         isSignInButtonClicked = true;
                         resolveSignIn();
                     }else{
-                        GuiUtil.Msg(this,"Sem conexão com a internet");
+                        GuiUtil.Msg(this, getString(R.string.sem_internt));
                     }
                 }
                 break;
             case R.id.btRevokeAcess:
                 if(googleApiClient.isConnected()) {
                     revokeAccess();
-                    GuiUtil.Msg(this, "Acesso revogado!");
+                    GuiUtil.Msg(this, getString(R.string.acesso_revogado));
                 }else{
-                    GuiUtil.Msg(this, "Conta Google+ deve estar conectada");
+                    GuiUtil.Msg(this, getString(R.string.conectar_google));
                 }
                 break;
         }
@@ -300,7 +304,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
         usuario.setSenha(idGPlus);
         usuario.setEmail(email);
         helper.salvarUsuario(usuario);
-        helper.logar(usuario.getLogin(),usuario.getSenha());
+        helper.logar(usuario.getLogin(), usuario.getSenha());
     }
 
     @Override
