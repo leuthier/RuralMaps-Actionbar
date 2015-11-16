@@ -235,7 +235,7 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
     }
 
     private void chamarMapsActivity(){
-        startActivity(new Intent(this, MapsActivity.class));
+        startActivity(new Intent(this, TelaSplashActivity.class));
         finish();
     }
 
