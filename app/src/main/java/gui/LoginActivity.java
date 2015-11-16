@@ -16,21 +16,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
-import com.mpoo.ruralmaps.ruralmaps.R;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
+import com.mpoo.ruralmaps.ruralmaps.R;
 import com.mpoo.ruralmaps.ruralmaps.Usuario;
 
 import dao.UsuarioDAO;
@@ -234,10 +231,9 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
     }
 
     private void chamarMapsActivity(){
-        startActivity(new Intent(this, MapsActivity.class));
+        startActivity(new Intent(this, TelaSplashActivity.class));
         finish();
     }
-
 
     @Override
     public void onStart(){
