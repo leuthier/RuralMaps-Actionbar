@@ -24,6 +24,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("create table pessoa(_id integer primary key autoincrement,"
                 + "pessoa text not null, dt_criacao text , dt_completado text)");
 
+        //tabela placemark
+        db.execSQL("create table placemark(name text not null, description text, iconid text, "
+                + "latitude double, longitude double");
+
         //cadastrar usuario Admin
         db.execSQL("insert into usuario(nome, login, senha, email) values('Admin','admin', '123456','admin@hotmail.com.br')");
     }
@@ -58,6 +62,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         public static final String[] COLUNAS = new String[]{
                 _ID, PESSOA, DT_CRIACAO, DT_COMPLETADO
+        };
+    }
+
+    public static class Placemarks {
+        public static final String TABELA = "placemarks";
+        public static final String NAME = "name";
+        public static final String DESCRIPTION = "description";
+        public static final String ICONID = "iconid";
+        public static final String LATITUDE = "latitude";
+        public static final String LONGITUDE = "logitude";
+
+        public static final String[] COLUNAS = new String[]{
+                NAME, DESCRIPTION, ICONID, LATITUDE, LONGITUDE
         };
     }
 }
