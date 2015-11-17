@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="gui.MapsActivity">
 
+    <item android:id="@+id/search_b"
+        android:title="@string/search"
+        android:showAsAction="always"
+        android:actionViewClass="android.widget.SearchView"/>
+
     <item android:id="@+id/action_fale_Conosco"
         android:title="@string/fale_conosco"
         android:orderInCategory="100"

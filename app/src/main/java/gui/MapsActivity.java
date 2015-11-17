@@ -3,23 +3,21 @@ package gui;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SearchView;
 
-
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.plus.Plus;
 import com.mpoo.ruralmaps.ruralmaps.Placemark;
 import com.mpoo.ruralmaps.ruralmaps.R;
 
@@ -27,8 +25,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 import negocio.ParserKML;
-import negocio.SessaoUsuario;
-import negocio.UsuarioNegocio;
 
 
 public class MapsActivity extends FragmentActivity {
@@ -60,6 +56,7 @@ public class MapsActivity extends FragmentActivity {
                 }
             }
         });
+
     }
 
     @Override
@@ -111,7 +108,13 @@ public class MapsActivity extends FragmentActivity {
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
+
+        super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_mapa, menu);
+
+        SearchView sv = (SearchView) menu.findItem(R.id.search_b).getActionView();
+        sv.setOnQueryTextListener(new SearchFiltro());
+
         return true;
     }
 
@@ -160,6 +163,23 @@ public class MapsActivity extends FragmentActivity {
             mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
         } else {
             mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        }
+    }
+
+    private class SearchFiltro implements SearchView.OnQueryTextListener{
+
+        @Override
+        public boolean onQueryTextChange(String newText) {
+            Log.i("Script", "onQueryTextChange "+ newText);
+            // a logica da busca analise de texto, neste
+            return false;
+        }
+
+        @Override
+        public boolean onQueryTextSubmit(String query) {
+            Log.i("Script", "onQueryTextSubmit "+ query);
+            // a logica da busca do pontos deve ser implementada nesta função
+            return false;
         }
     }
 }
