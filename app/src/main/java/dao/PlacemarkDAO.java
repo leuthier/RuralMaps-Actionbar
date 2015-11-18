@@ -16,7 +16,7 @@ public class PlacemarkDAO {
     private SQLiteDatabase database;
 
     private static PlacemarkDAO instancia = new PlacemarkDAO();
-    private PlacemarkDAO(){
+    public PlacemarkDAO(){
     }
 
     public static PlacemarkDAO getInstancia(){
@@ -99,7 +99,6 @@ public class PlacemarkDAO {
         }
         return null;
     }
-
 
     public void fechar(){
         databaseHelper.close();

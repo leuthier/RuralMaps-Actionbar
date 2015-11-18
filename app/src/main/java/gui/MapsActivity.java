@@ -23,14 +23,21 @@ import com.mpoo.ruralmaps.ruralmaps.R;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
+import dao.PlacemarkDAO;
 import negocio.ParserKML;
+import negocio.PlacemarkNegocio;
 
 
 public class MapsActivity extends FragmentActivity {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private static final String MANTER_CONECTADO = "manter_conectado";
+
+    private PlacemarkDAO placemarkDAO;
+    private PlacemarkNegocio placemarkNegocio = new PlacemarkNegocio();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,14 +87,15 @@ public class MapsActivity extends FragmentActivity {
 
     private void setUpMap() {
         InputStream mapa = getResources().openRawResource(R.raw.ruralmaps);
-
+        mMap.setMyLocationEnabled(true);
         try {
 
             //SessaoUsuario sessaoUsuario = SessaoUsuario.getSessao();
-            ArrayList<Placemark> lista = ParserKML.getPlaces(mapa);
+            List<Placemark> lista = ParserKML.getPlaces(mapa);
             for (Placemark place : lista) {
                 MarkerOptions mo = new MarkerOptions();
-                LatLng position = new LatLng(place.getCoordinates().latitude, place.getCoordinates().longitude);
+                LatLng coord = place.getCoordinates();
+                LatLng position = new LatLng(coord.latitude, coord.longitude);
 
                 mo.title(place.getName());
                 mo.snippet(place.getDescription());
@@ -95,9 +103,11 @@ public class MapsActivity extends FragmentActivity {
                         .loadMapOfIcons(place.getIconID())));
                 mo.position(position);
 
+
+
                 //sessaoUsuario.putPlaceMarks(place, mo);
                 mMap.addMarker(mo);
-                mMap.setMyLocationEnabled(true);
+                placemarkNegocio.salvarPlace(place);
             }
 
         } catch (Exception e) {

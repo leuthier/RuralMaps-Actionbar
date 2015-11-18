@@ -25,8 +25,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + "pessoa text not null, dt_criacao text , dt_completado text)");
 
         //tabela placemark
-        db.execSQL("create table placemark(name text not null, description text, iconid text, "
-                + "latitude double, longitude double");
+        db.execSQL("create table placemark(_id integer primary key autoincrement,"
+                +"name text not null, description text, iconid text not null, "
+                + "latitude real, longitude real)");
 
         //cadastrar usuario Admin
         db.execSQL("insert into usuario(nome, login, senha, email) values('Admin','admin', '123456','admin@hotmail.com.br')");
