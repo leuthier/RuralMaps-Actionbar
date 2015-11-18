@@ -45,10 +45,11 @@ public class PlacemarkDAO {
     }
 
     public List<Placemark> listarPlacemarks(){
+        List<Placemark> placemarks = new ArrayList<Placemark>();
+
         Cursor cursor = getDatabase().query(DatabaseHelper.Placemarks.TABELA,
                 DatabaseHelper.Placemarks.COLUNAS, null, null, null, null, null);
 
-        List<Placemark> placemarks = new ArrayList<Placemark>();
         while (cursor.moveToNext()){
             Placemark negocio = criarPlacemark(cursor);
             placemarks.add(negocio);
@@ -99,7 +100,6 @@ public class PlacemarkDAO {
         }
         return null;
     }
-
 
     public void fechar(){
         databaseHelper.close();
