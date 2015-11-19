@@ -103,11 +103,12 @@ public class MapsActivity extends FragmentActivity {
                         .loadMapOfIcons(place.getIconID())));
                 mo.position(position);
 
-
-
                 //sessaoUsuario.putPlaceMarks(place, mo);
                 mMap.addMarker(mo);
-                placemarkNegocio.salvarPlace(place);
+
+            }
+            for (Placemark ponto : lista){
+                enviarPonto(ponto);
             }
 
         } catch (Exception e) {
@@ -117,13 +118,26 @@ public class MapsActivity extends FragmentActivity {
                 new LatLng(-8.0144, -34.95061), 15));
     }
 
+    public void enviarPonto(Placemark place){
+        placemarkNegocio.salvarPlace(place);
+    }
+
     public boolean onCreateOptionsMenu(Menu menu) {
 
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_mapa, menu);
 
+
         SearchView sv = (SearchView) menu.findItem(R.id.search_b).getActionView();
         sv.setOnQueryTextListener(new SearchFiltro());
+
+
+        return true;
+    }
+
+    public boolean pesquisarPonto(String ponto){
+
+        placemarkNegocio.buscarPlace(ponto);
 
         return true;
     }
@@ -187,8 +201,11 @@ public class MapsActivity extends FragmentActivity {
 
         @Override
         public boolean onQueryTextSubmit(String query) {
-            Log.i("Script", "onQueryTextSubmit "+ query);
-            // a logica da busca do pontos deve ser implementada nesta função
+            Log.i("Script", "onQueryTextSubmit " + query);
+            LatLng coord;
+            coord = placemarkNegocio.buscarPlace(query);
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
+                    new LatLng(coord.latitude, coord.longitude), 15));
             return false;
         }
     }

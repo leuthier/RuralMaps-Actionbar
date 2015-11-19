@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.mpoo.ruralmaps.ruralmaps.Placemark;
 
 import java.util.ArrayList;
@@ -78,13 +79,14 @@ public class PlacemarkDAO {
                 "_id = ?", new String[]{Integer.toString(id)}) > 0;
     }
 
-    public Placemark bucarPlacemarkPorName(String name){
+    public LatLng bucarPlacemarkPorName(String name){
         Cursor cursor = getDatabase().query(DatabaseHelper.Placemarks.TABELA,
                 DatabaseHelper.Placemarks.COLUNAS,"name = ?",new String[]{name}, null, null, null);
         if (cursor.moveToNext()){
             Placemark negocio = criarPlacemark(cursor);
+            LatLng coordenadas = negocio.getCoordinates();
             cursor.close();
-            return negocio;
+            return coordenadas;
         }
         return null;
     }
