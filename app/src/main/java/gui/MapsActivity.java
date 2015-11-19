@@ -21,10 +21,12 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.mpoo.ruralmaps.ruralmaps.Placemark;
 import com.mpoo.ruralmaps.ruralmaps.R;
 
+import org.xml.sax.SAXException;
+
+import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
+import javax.xml.parsers.ParserConfigurationException;
 
 import dao.PlacemarkDAO;
 import negocio.ParserKML;
@@ -37,13 +39,15 @@ public class MapsActivity extends FragmentActivity {
     private static final String MANTER_CONECTADO = "manter_conectado";
 
     private PlacemarkDAO placemarkDAO;
-    private PlacemarkNegocio placemarkNegocio = new PlacemarkNegocio();
+    private PlacemarkNegocio placemarkNegocio = new PlacemarkNegocio(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setUpMapIfNeeded();
+        registrarPonto();
 
         final Button testButton = (Button) findViewById(R.id.Btype);
         testButton.setTag(1);
@@ -81,6 +85,7 @@ public class MapsActivity extends FragmentActivity {
             // Check if we were successful in obtaining the map.
             if (mMap != null) {
                 setUpMap();
+
             }
         }
     }
@@ -107,15 +112,29 @@ public class MapsActivity extends FragmentActivity {
                 mMap.addMarker(mo);
 
             }
-            for (Placemark ponto : lista){
-                enviarPonto(ponto);
-            }
+
 
         } catch (Exception e) {
             e.printStackTrace();
         }
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
                 new LatLng(-8.0144, -34.95061), 15));
+    }
+
+    public void registrarPonto(){
+        InputStream mapa = getResources().openRawResource(R.raw.ruralmaps);
+        List<Placemark> lista = null;
+        try {
+            lista = ParserKML.getPlaces(mapa);
+        } catch (SAXException | ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (Placemark ponto : lista){
+            Log.i("Script", "========================================== placemarks " + ponto);
+            placemarkDAO.salvarPlacemarkDAO(ponto);
+        }
     }
 
     public void enviarPonto(Placemark place){

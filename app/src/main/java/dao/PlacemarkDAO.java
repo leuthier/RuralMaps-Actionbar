@@ -58,7 +58,7 @@ public class PlacemarkDAO {
         return placemarks;
     }
 
-    public long salvarPlacemark(Placemark placemark){
+    public long salvarPlacemarkDAO(Placemark placemark){
         database = databaseHelper.getWritableDatabase();
         ContentValues valores = new ContentValues();
         valores.put(DatabaseHelper.Placemarks.NAME, placemark.getName());
