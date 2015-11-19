@@ -15,6 +15,8 @@ import org.xml.sax.SAXException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -22,9 +24,9 @@ import javax.xml.parsers.ParserConfigurationException;
 
 public class ParserKML {
 
-    public static ArrayList<Placemark> getPlaces(InputStream kmlContent)
+    public static List<Placemark> getPlaces(InputStream kmlContent)
             throws SAXException, IOException, ParserConfigurationException {
-        ArrayList<Placemark> places = new ArrayList<Placemark>();
+        List<Placemark> places = new LinkedList<Placemark>();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
         DocumentBuilder builder = factory.newDocumentBuilder();
