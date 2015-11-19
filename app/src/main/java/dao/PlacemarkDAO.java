@@ -55,6 +55,7 @@ public class PlacemarkDAO {
             Placemark negocio = criarPlacemark(cursor);
             placemarks.add(negocio);
         }
+
         cursor.close();
         return placemarks;
     }
@@ -69,18 +70,18 @@ public class PlacemarkDAO {
         valores.put(DatabaseHelper.Placemarks.LONGITUDE, placemark.getCoordinates().longitude);
 
         if (placemark.getName() != null){
-            return getDatabase().update(DatabaseHelper.Usuarios.TABELA, valores, "nome = ?",
+            return getDatabase().update(DatabaseHelper.Placemarks.TABELA, valores, "nome = ?",
                     new String[]{placemark.getName().toString()});
         }
-        return getDatabase().insert(DatabaseHelper.Usuarios.TABELA, null, valores);
+        return getDatabase().insert(DatabaseHelper.Placemarks.TABELA, null, valores);
     }
 
     public boolean removerPlacemark(int id){
-        return getDatabase().delete(DatabaseHelper.Usuarios.TABELA,
+        return getDatabase().delete(DatabaseHelper.Placemarks.TABELA,
                 "_id = ?", new String[]{Integer.toString(id)}) > 0;
     }
 
-    public LatLng bucarPlacemarkPorName(String name){
+    public LatLng buscarPlacemarkPorName(String name){
         Cursor cursor = getDatabase().query(DatabaseHelper.Placemarks.TABELA,
                 DatabaseHelper.Placemarks.COLUNAS,"name = ?",new String[]{name}, null, null, null);
         if (cursor.moveToNext()){

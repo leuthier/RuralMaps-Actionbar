@@ -150,7 +150,6 @@ public class MapsActivity extends FragmentActivity {
         SearchView sv = (SearchView) menu.findItem(R.id.search_b).getActionView();
         sv.setOnQueryTextListener(new SearchFiltro());
 
-
         return true;
     }
 
@@ -227,5 +226,10 @@ public class MapsActivity extends FragmentActivity {
                     new LatLng(coord.latitude, coord.longitude), 15));
             return false;
         }
+    }
+    //metodo que limpa o mapa para posteriormente por meio de outro método motrar a lista desejada de pontos
+    public void clearMap(){
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-8.0144, -34.95061), 15));
+        mMap.clear();
     }
 }
