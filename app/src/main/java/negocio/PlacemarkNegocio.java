@@ -26,7 +26,7 @@ public class PlacemarkNegocio {
 
     public LatLng buscarPlace(String ponto){
         LatLng coord;
-        coord = placemarkDAO.bucarPlacemarkPorName(ponto);
+        coord = placemarkDAO.buscarPlacemarkPorName(ponto);
         return coord;
     }
 }

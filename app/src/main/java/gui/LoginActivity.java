@@ -278,9 +278,9 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
             String name = p.getDisplayName();
             String email = Plus.AccountApi.getAccountName(googleApiClient);
             String idGPlus = p.getId();
+            String personPhotoUrl = p.getImage().getUrl();
 
-//            tvName.setText(name);
-//            tvEmail.setText(email);
+
 
             GuiUtil.Msg(this, "Bem vindo "+name+"!");
             GuiUtil.Msg(this, "Email: " + email);
@@ -358,10 +358,6 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
             instancia = new LoginActivity();
         }
         return instancia;
-    }
-
-    public GoogleApiClient getGoogleApiClient(){
-        return googleApiClient;
     }
 
     public boolean conexaoInternetOk() {
