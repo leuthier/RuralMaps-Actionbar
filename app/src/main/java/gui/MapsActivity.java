@@ -131,10 +131,10 @@ public class MapsActivity extends FragmentActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for (Placemark ponto : lista){
-            Log.i("Script", "========================================== placemarks " + ponto);
-            placemarkDAO.salvarPlacemarkDAO(ponto);
-        }
+//        for (Placemark ponto : lista){
+//            Log.i("Script", "========================================== placemarks " + ponto);
+//            placemarkDAO.salvarPlacemarkDAO(ponto);
+//        }
     }
 
     public void enviarPonto(Placemark place){
@@ -160,6 +160,8 @@ public class MapsActivity extends FragmentActivity {
         return true;
     }
 
+    private LoginActivity instanciaLogin = new LoginActivity();
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -169,14 +171,13 @@ public class MapsActivity extends FragmentActivity {
                 finish();
                 break;
             case R.id.action_logout:
-//                if (LoginActivity.instancia().signOutGoogle()){
-//                    chamarLoginActivity();
-//                    finish();
-//                    break;
-//                }
                 logout();
-                finish();
-
+                if (instanciaLogin.getApiClient() != null) {
+                    instanciaLogin.signOutFromGplus();
+                    instanciaLogin.revokeAccess();
+                }
+//                }finish();
+//                chamarLoginActivity();
                 break;
         }
         return true;
@@ -187,17 +188,13 @@ public class MapsActivity extends FragmentActivity {
     }
 
     private void logout() {
-/*        if(LoginActivity.instancia().getGoogleApiClient().isConnected()) {
-            LoginActivity.instancia().revokeAccess();
-        }*/
         SharedPreferences preferences = getSharedPreferences("LoginActivityPreferences",
                 Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean(MANTER_CONECTADO, false);
         editor.clear();
         editor.commit();
-        finish();
-        chamarLoginActivity();
+//        finish();
     }
 
     public void changeType(View view) {

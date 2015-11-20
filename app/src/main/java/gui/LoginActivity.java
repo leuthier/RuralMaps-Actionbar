@@ -6,7 +6,10 @@ import android.content.Intent;
 import android.content.IntentSender;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.ConnectivityManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -16,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -29,6 +33,8 @@ import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
 import com.mpoo.ruralmaps.ruralmaps.R;
 import com.mpoo.ruralmaps.ruralmaps.Usuario;
+
+import java.io.InputStream;
 
 import dao.UsuarioDAO;
 import negocio.UsuarioNegocio;
@@ -48,10 +54,12 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
     private GoogleApiClient googleApiClient;
     private ConnectionResult connectionResult;
 
+    private ImageView imgProfilePic;
+    private static final int PROFILE_PIC_SIZE = 400;
+
     private boolean isConsentScreenOpened;
     private boolean isSignInButtonClicked;
 
-    private static LoginActivity instancia;
     private SignInButton btSignInDefault;
     private TextView tvName;
     private TextView tvEmail;
@@ -91,6 +99,8 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
 
         Button btRevokeAcess = (Button) findViewById(R.id.btRevokeAcess);
         btRevokeAcess.setOnClickListener(this);
+
+        imgProfilePic = (ImageView) findViewById(R.id.imgProfilePic);
 
         checkbox_conectado = (CheckBox) findViewById(R.id.login_checkbox_conectado);
 
@@ -280,13 +290,17 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
             String idGPlus = p.getId();
             String personPhotoUrl = p.getImage().getUrl();
 
-
-
             GuiUtil.Msg(this, "Bem vindo "+name+"!");
             GuiUtil.Msg(this, "Email: " + email);
             idGPlus = idGPlus.substring(0,14);
             GuiUtil.Msg(this, idGPlus);
             cadastrarUsuarioGoogle(name,email,idGPlus);
+
+//            personPhotoUrl = personPhotoUrl.substring(0,
+//                    personPhotoUrl.length() - 2)
+//                    + PROFILE_PIC_SIZE;
+//            new LoadProfileImage(imgProfilePic).execute(personPhotoUrl);
+
             chamarMapsActivity();
 
         }
@@ -294,6 +308,33 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
             GuiUtil.Msg(this, "Dados não liberados");
         }
     }
+
+//    private class LoadProfileImage extends AsyncTask<String, Void, Bitmap> {
+//        ImageView bmImage;
+//
+//        public LoadProfileImage(ImageView bmImage) {
+//            this.bmImage = bmImage;
+//        }
+//
+//        protected Bitmap doInBackground(String... urls) {
+//            String urldisplay = urls[0];
+//            Bitmap mIcon11 = null;
+//            try {
+//                InputStream in = new java.net.URL(urldisplay).openStream();
+//                mIcon11 = BitmapFactory.decodeStream(in);
+//            } catch (Exception e) {
+//                Log.e("Error", e.getMessage());
+//                e.printStackTrace();
+//            }
+//            return mIcon11;
+//        }
+//
+//        protected void onPostExecute(Bitmap result) {
+//            bmImage.setImageBitmap(result);
+//        }
+//    }
+
+
     public void cadastrarUsuarioGoogle(String nome,String email, String idGPlus){
         Usuario usuario = new Usuario();
         usuario.setNome(nome);
@@ -342,22 +383,20 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
         }
     }
 
-    public void revokeAccess(){
-        Plus.AccountApi.clearDefaultAccount(googleApiClient);
-        Plus.AccountApi.revokeAccessAndDisconnect(googleApiClient).setResultCallback
-                (new ResultCallback<Status>() {
-                    @Override
-                    public void onResult(Status result) {
-                        finish();
-                    }
-                });
-    }
-
-    public static LoginActivity instancia(){
-        if (instancia == null){
-            instancia = new LoginActivity();
+    public void revokeAccess() {
+        if (googleApiClient.isConnected()) {
+            Plus.AccountApi.clearDefaultAccount(googleApiClient);
+            Plus.AccountApi.revokeAccessAndDisconnect(googleApiClient).setResultCallback
+                    (new ResultCallback<Status>() {
+                        @Override
+                        public void onResult(Status result) {
+                            finish();
+                        }
+                    });
+        }else{
+            Log.i("SCRIPT","google api client nao conectado =========");
         }
-        return instancia;
+
     }
 
     public boolean conexaoInternetOk() {
@@ -372,18 +411,14 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
         }
         return conectado;
     }
-    public boolean signOutGoogle() {
-//        if (googleApiClient == null) {
-//            Log.i("SCRIPT", "===========GOOGLE API EH NULO===============================================");
-//        } else {
-//            Log.i("SCRIPT", "====OBJETO GOOGLE API NAO NULO!====================================================");
-            if (googleApiClient.isConnected()) {
-                Log.i("SCRIPT", "=======CONECTADO!================================================");
+    public void signOutFromGplus(){
+        if (googleApiClient.isConnected()) {
                 Plus.AccountApi.clearDefaultAccount(googleApiClient);
                 googleApiClient.disconnect();
                 googleApiClient.connect();
-                return true;
-            }return false;
         }
-//    }
+    }
+    public GoogleApiClient getApiClient(){
+        return this.googleApiClient;
+    }
 }
