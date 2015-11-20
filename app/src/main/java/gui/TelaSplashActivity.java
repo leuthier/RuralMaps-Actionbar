@@ -10,7 +10,7 @@ import com.mpoo.ruralmaps.ruralmaps.R;
 
 public class TelaSplashActivity extends Activity {
 
-    private static int TEMPO_SPLASH = 4000;
+    private static int TEMPO_SPLASH = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class TelaSplashActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(TelaSplashActivity.this, MapsActivity.class);
+                Intent i = new Intent(TelaSplashActivity.this, LoginActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -49,4 +49,5 @@ public class TelaSplashActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

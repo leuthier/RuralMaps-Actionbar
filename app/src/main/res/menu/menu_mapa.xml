@@ -22,6 +22,4 @@
         android:title="@string/fechar"
         android:orderInCategory="102"
         app:showAsAction="never" />
-
-
 </menu>
