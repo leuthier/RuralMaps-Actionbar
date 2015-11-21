@@ -16,13 +16,13 @@ public class PlacemarkDAO {
     private DatabaseHelper databaseHelper;
     private SQLiteDatabase database;
 
-    private static PlacemarkDAO instancia = new PlacemarkDAO();
-    public PlacemarkDAO(){
-    }
+    //private static PlacemarkDAO instancia = new PlacemarkDAO();
+    //public PlacemarkDAO(){
+    //}
 
-    public static PlacemarkDAO getInstancia(){
-        return instancia;
-    }
+    //public static PlacemarkDAO getInstancia(){
+    //    return instancia;
+    //}
 
     public PlacemarkDAO(Context context){
         databaseHelper = new DatabaseHelper(context);
@@ -70,7 +70,7 @@ public class PlacemarkDAO {
         valores.put(DatabaseHelper.Placemarks.LONGITUDE, placemark.getCoordinates().longitude);
 
         if (placemark.getName() != null){
-            return getDatabase().update(DatabaseHelper.Placemarks.TABELA, valores, "nome = ?",
+            return getDatabase().update(DatabaseHelper.Placemarks.TABELA, valores, "name = ?",
                     new String[]{placemark.getName().toString()});
         }
         return getDatabase().insert(DatabaseHelper.Placemarks.TABELA, null, valores);

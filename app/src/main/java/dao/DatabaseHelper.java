@@ -31,12 +31,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         //cadastrar usuario Admin
         db.execSQL("insert into usuario(nome, login, senha, email) values('Admin','admin', '123456','admin@hotmail.com.br')");
+
+        //cadastrar placemark
+        db.execSQL("insert into placemark(name, description, iconid, latitude, longitude)"
+                + "values('DCE', '', '985', -34.9490359, -8.0136736)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists " + Usuarios.TABELA);
         db.execSQL("drop table if exists "+ Pessoas.TABELA);
+        db.execSQL("drop table if exists"+ Placemarks.TABELA);
         onCreate(db);
 
     }

@@ -38,9 +38,9 @@ public class MapsActivity extends FragmentActivity {
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private static final String MANTER_CONECTADO = "manter_conectado";
 
-    private PlacemarkDAO placemarkDAO;
+    private PlacemarkDAO placemarkDAO = new PlacemarkDAO(this);
     private PlacemarkNegocio placemarkNegocio = new PlacemarkNegocio(this);
-
+    private int started = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +74,14 @@ public class MapsActivity extends FragmentActivity {
     protected void onResume() {
         super.onResume();
         setUpMapIfNeeded();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (started == 0){
+            registrarPonto();
+        }
     }
 
     private void setUpMapIfNeeded() {
@@ -131,10 +139,10 @@ public class MapsActivity extends FragmentActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        for (Placemark ponto : lista){
-//            Log.i("Script", "========================================== placemarks " + ponto);
-//            placemarkDAO.salvarPlacemarkDAO(ponto);
-//        }
+        for (Placemark ponto : lista){
+            Log.i("Script", "========================================== placemarks " + ponto);
+         placemarkDAO.salvarPlacemarkDAO(ponto);
+        }started = 1;
     }
 
     public void enviarPonto(Placemark place){
