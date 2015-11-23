@@ -20,12 +20,21 @@
             android:nestedScrollingEnabled="false"
             android:onClick="changeType" />
 
+        <Button
+            android:id="@+id/btRevokeAccessMaps"
+            android:layout_marginLeft="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maps_btn_revogar"
+            android:onClick="revokeAccessMaps" />
+
         <ImageView
             android:id="@+id/imgProfilePic"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="99dp"
             android:layout_weight="0.13" />
+
     </LinearLayout>
 
     <fragment
