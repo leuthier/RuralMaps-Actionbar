@@ -40,12 +40,11 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
 
     private PlacemarkDAO placemarkDAO = new PlacemarkDAO(this);
     private PlacemarkNegocio placemarkNegocio = new PlacemarkNegocio(this);
-<<<<<<< HEAD
+
     private Button btRevokeAccessMaps;
 
-=======
     private int started = 0;
->>>>>>> origin/master
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +68,9 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
                     testButton.setText("Satelite");
                     v.setTag(1);
                 }
+        //Informaçoes do transito em tempo real
+        mMap.setTrafficEnabled(true);
+        mMap.addPolyline();
             }
         });
 
