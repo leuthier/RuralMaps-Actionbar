@@ -34,7 +34,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         //cadastrar placemark
         db.execSQL("insert into placemark(name, description, iconid, latitude, longitude)"
-                + "values('DCE', '', '985', -34.9490359, -8.0136736)");
+                + "values('DCE', ' ', '985', -34.9490359, -8.0136736)");
     }
 
     @Override
@@ -72,12 +72,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public static class Placemarks {
-        public static final String TABELA = "placemarks";
+        public static final String TABELA = "placemark";
+        public static final String _ID = "_id";
         public static final String NAME = "name";
         public static final String DESCRIPTION = "description";
         public static final String ICONID = "iconid";
         public static final String LATITUDE = "latitude";
-        public static final String LONGITUDE = "logitude";
+        public static final String LONGITUDE = "longitude";
 
         public static final String[] COLUNAS = new String[]{
                 NAME, DESCRIPTION, ICONID, LATITUDE, LONGITUDE

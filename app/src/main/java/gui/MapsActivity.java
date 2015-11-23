@@ -47,7 +47,6 @@ public class MapsActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setUpMapIfNeeded();
-        registrarPonto();
 
         final Button testButton = (Button) findViewById(R.id.Btype);
         testButton.setTag(1);
@@ -141,7 +140,7 @@ public class MapsActivity extends FragmentActivity {
         }
         for (Placemark ponto : lista){
             Log.i("Script", "========================================== placemarks " + ponto);
-         placemarkDAO.salvarPlacemarkDAO(ponto);
+            placemarkDAO.salvarPlacemarkDAO(ponto);
         }started = 1;
     }
 

@@ -39,11 +39,11 @@ public class UsuarioDAO {
 
     private Usuario criarUsuario(Cursor cursor){
         Usuario negocio = new Usuario(
-                cursor.getInt(cursor.getColumnIndex(DatabaseHelper.Usuarios._ID)),
-                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.NOME)),
-                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.LOGIN)),
-                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.SENHA)),
-                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.EMAIL))
+            cursor.getInt(cursor.getColumnIndex(DatabaseHelper.Usuarios._ID)),
+            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.NOME)),
+            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.LOGIN)),
+            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.SENHA)),
+            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.EMAIL))
         );
         return negocio;
     }
