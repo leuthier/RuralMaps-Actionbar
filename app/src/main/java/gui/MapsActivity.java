@@ -38,17 +38,20 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private static final String MANTER_CONECTADO = "manter_conectado";
 
-    private PlacemarkDAO placemarkDAO;
+    private PlacemarkDAO placemarkDAO = new PlacemarkDAO(this);
     private PlacemarkNegocio placemarkNegocio = new PlacemarkNegocio(this);
+<<<<<<< HEAD
     private Button btRevokeAccessMaps;
 
+=======
+    private int started = 0;
+>>>>>>> origin/master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setUpMapIfNeeded();
-        registrarPonto();
 
         final Button testButton = (Button) findViewById(R.id.Btype);
         testButton.setTag(1);
@@ -91,6 +94,14 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
     protected void onResume() {
         super.onResume();
         setUpMapIfNeeded();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (started == 0){
+            registrarPonto();
+        }
     }
 
     private void setUpMapIfNeeded() {
@@ -148,10 +159,10 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        for (Placemark ponto : lista){
-//            Log.i("Script", "========================================== placemarks " + ponto);
-//            placemarkDAO.salvarPlacemarkDAO(ponto);
-//        }
+        for (Placemark ponto : lista){
+            Log.i("Script", "========================================== placemarks " + ponto);
+            placemarkDAO.salvarPlacemarkDAO(ponto);
+        }started = 1;
     }
 
     public void enviarPonto(Placemark place){

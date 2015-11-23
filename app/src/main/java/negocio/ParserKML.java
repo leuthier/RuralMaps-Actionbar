@@ -26,7 +26,7 @@ public class ParserKML {
 
     public static List<Placemark> getPlaces(InputStream kmlContent)
             throws SAXException, IOException, ParserConfigurationException {
-        List<Placemark> places = new LinkedList<Placemark>();
+        ArrayList<Placemark> places = new ArrayList<Placemark>();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
         DocumentBuilder builder = factory.newDocumentBuilder();

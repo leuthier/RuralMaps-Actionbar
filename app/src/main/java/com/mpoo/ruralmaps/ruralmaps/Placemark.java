@@ -6,17 +6,19 @@ import java.io.Serializable;
 
 public class Placemark implements Serializable{
     private static final long serialVersionUID = 1L;
+    private Integer _id;
     private String name;
     private String description;
     private double latitude;
     private double longitude;
     private String iconID;
 
-    public Placemark(String name, String description, LatLng coordinates, String iconID) {
-        this(name,description,iconID,coordinates.latitude,coordinates.longitude);
+    public Placemark(Integer _id, String name, String description, LatLng coordinates, String iconID) {
+        this(_id,name,description,iconID,coordinates.latitude,coordinates.longitude);
     }
 
-    public Placemark(String name, String description, String iconID, double latitude, double longitude){
+    public Placemark(Integer _id, String name, String description, String iconID, double latitude, double longitude){
+        this._id = _id;
         this.name = name;
         this.description = description;
         this.iconID = iconID;
@@ -24,6 +26,14 @@ public class Placemark implements Serializable{
         this.longitude = longitude;
     }
     public Placemark(){}
+
+    public Integer getId() {
+        return _id;
+    }
+
+    public void setId(Integer _id) {
+        this._id = _id;
+    }
 
     public String getName() {
         return name;

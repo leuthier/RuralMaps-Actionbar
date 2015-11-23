@@ -11,7 +11,8 @@ import dao.PlacemarkDAO;
 
 
 public class PlacemarkNegocio {
-    private PlacemarkDAO placemarkDAO = new PlacemarkDAO();
+    //private PlacemarkDAO placemarkDAO = new PlacemarkDAO();
+    private PlacemarkDAO placemarkDAO;
     private DatabaseHelper databaseHelper;
 
 

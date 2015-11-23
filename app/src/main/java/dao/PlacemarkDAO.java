@@ -16,13 +16,13 @@ public class PlacemarkDAO {
     private DatabaseHelper databaseHelper;
     private SQLiteDatabase database;
 
-    private static PlacemarkDAO instancia = new PlacemarkDAO();
-    public PlacemarkDAO(){
-    }
+    //private static PlacemarkDAO instancia = new PlacemarkDAO();
+    //public PlacemarkDAO(){
+    //}
 
-    public static PlacemarkDAO getInstancia(){
-        return instancia;
-    }
+    //public static PlacemarkDAO getInstancia(){
+    //    return instancia;
+    //}
 
     public PlacemarkDAO(Context context){
         databaseHelper = new DatabaseHelper(context);
@@ -36,12 +36,13 @@ public class PlacemarkDAO {
     }
 
     private Placemark criarPlacemark(Cursor cursor){
+        Integer _id = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.Placemarks._ID));
         String name = cursor.getString(cursor.getColumnIndex(DatabaseHelper.Placemarks.NAME));
         String description = cursor.getString(cursor.getColumnIndex(DatabaseHelper.Placemarks.DESCRIPTION));
         String iconID = cursor.getString(cursor.getColumnIndex(DatabaseHelper.Placemarks.ICONID));
         double latitude = cursor.getDouble(cursor.getColumnIndex(DatabaseHelper.Placemarks.LATITUDE));
         double longitude = cursor.getDouble(cursor.getColumnIndex(DatabaseHelper.Placemarks.LONGITUDE));
-        Placemark negocio = new Placemark(name, description, iconID, latitude, longitude);
+        Placemark negocio = new Placemark(_id,name, description, iconID, latitude, longitude);
         return negocio;
     }
 
@@ -69,9 +70,9 @@ public class PlacemarkDAO {
         valores.put(DatabaseHelper.Placemarks.LATITUDE, placemark.getCoordinates().latitude);
         valores.put(DatabaseHelper.Placemarks.LONGITUDE, placemark.getCoordinates().longitude);
 
-        if (placemark.getName() != null){
-            return getDatabase().update(DatabaseHelper.Placemarks.TABELA, valores, "nome = ?",
-                    new String[]{placemark.getName().toString()});
+        if (placemark.getId() != null){
+            return getDatabase().update(DatabaseHelper.Placemarks.TABELA, valores, "_id = ?",
+                    new String[]{placemark.getId().toString()});
         }
         return getDatabase().insert(DatabaseHelper.Placemarks.TABELA, null, valores);
     }
