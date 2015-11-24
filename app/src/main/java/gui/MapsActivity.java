@@ -33,15 +33,18 @@ import negocio.ParserKML;
 import negocio.PlacemarkNegocio;
 
 
-public class MapsActivity extends FragmentActivity {
+public class MapsActivity extends FragmentActivity implements View.OnClickListener {
 
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     private static final String MANTER_CONECTADO = "manter_conectado";
 
     private PlacemarkDAO placemarkDAO = new PlacemarkDAO(this);
     private PlacemarkNegocio placemarkNegocio = new PlacemarkNegocio(this);
-    private int started = 0;
 
+    private Button btRevokeAccessMaps;
+    
+    private int started = 0;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,9 +67,28 @@ public class MapsActivity extends FragmentActivity {
                     testButton.setText("Satelite");
                     v.setTag(1);
                 }
+        //Informaçoes do transito em tempo real
+        mMap.setTrafficEnabled(true);
+        mMap.addPolyline();
             }
         });
 
+        Button revogarAccess = (Button) findViewById(R.id.btRevokeAccessMaps);
+        revogarAccess.setOnClickListener(this);
+    }
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        switch (id) {
+            case R.id.btRevokeAccessMaps:
+                instanciaLogin.revokeAccess();
+                if(instanciaLogin == null){
+                    Log.i("SCRIPT","instancia login NAO nula ====================================");
+                }else{
+                    Log.i("SCRIPT","instancia login NULA ========================================");
+                }
+                break;
+        }
     }
 
     @Override
@@ -181,10 +203,10 @@ public class MapsActivity extends FragmentActivity {
                 logout();
                 if (instanciaLogin.getApiClient() != null) {
                     instanciaLogin.signOutFromGplus();
-                    instanciaLogin.revokeAccess();
+//                    instanciaLogin.revokeAccess();
                 }
 //                }finish();
-//                chamarLoginActivity();
+                chamarLoginActivity();
                 break;
         }
         return true;
@@ -193,6 +215,12 @@ public class MapsActivity extends FragmentActivity {
     private void chamarLoginActivity() {
         startActivity(new Intent(this, LoginActivity.class));
     }
+
+//    private void revokeAccessMaps(){
+//        instanciaLogin.revokeAccess();
+//        chamarLoginActivity();
+//        finish();
+//    }
 
     private void logout() {
         SharedPreferences preferences = getSharedPreferences("LoginActivityPreferences",
