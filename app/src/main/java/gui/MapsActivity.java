@@ -70,7 +70,7 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
                 }
         //Informaçoes do transito em tempo real
         mMap.setTrafficEnabled(true);
-        mMap.addPolyline();
+        //mMap.addPolyline();
             }
         });
 
@@ -183,12 +183,12 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
         return true;
     }
 
-    public boolean pesquisarPonto(String ponto){
+    /*public boolean pesquisarPonto(String ponto){
 
         placemarkNegocio.buscarPlace(ponto);
 
         return true;
-    }
+    }*/
 
     private LoginActivity instanciaLogin = new LoginActivity();
 
@@ -256,7 +256,10 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
         public boolean onQueryTextSubmit(String query) {
             Log.i("Script", "onQueryTextSubmit " + query);
             LatLng coord;
-            coord = placemarkNegocio.buscarPlace(query);
+            //coord = placemarkNegocio.buscarPlace(query);
+            Placemark place;
+            place = placemarkDAO.buscarPlacemarkPorName(query);
+            coord = place.getCoordinates();
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
                     new LatLng(coord.latitude, coord.longitude), 15));
             return false;

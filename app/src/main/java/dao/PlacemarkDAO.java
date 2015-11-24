@@ -82,14 +82,13 @@ public class PlacemarkDAO {
                 "_id = ?", new String[]{Integer.toString(id)}) > 0;
     }
 
-    public LatLng buscarPlacemarkPorName(String name){
+    public Placemark buscarPlacemarkPorName(String name){
         Cursor cursor = getDatabase().query(DatabaseHelper.Placemarks.TABELA,
                 DatabaseHelper.Placemarks.COLUNAS,"name = ?",new String[]{name}, null, null, null);
         if (cursor.moveToNext()){
             Placemark negocio = criarPlacemark(cursor);
-            LatLng coordenadas = negocio.getCoordinates();
             cursor.close();
-            return coordenadas;
+            return negocio;
         }
         return null;
     }
