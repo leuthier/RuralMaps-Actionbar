@@ -42,9 +42,9 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
     private PlacemarkNegocio placemarkNegocio = new PlacemarkNegocio(this);
 
     private Button btRevokeAccessMaps;
-    
+
     private int started = 0;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,25 +69,25 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
                 }
         //Informaçoes do transito em tempo real
         mMap.setTrafficEnabled(true);
-        mMap.addPolyline();
+        //mMap.addPolyline();
             }
         });
 
-        Button revogarAccess = (Button) findViewById(R.id.btRevokeAccessMaps);
-        revogarAccess.setOnClickListener(this);
+//        Button revogarAccess = (Button) findViewById(R.id.btRevokeAccessMaps);
+//        revogarAccess.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
-            case R.id.btRevokeAccessMaps:
-                instanciaLogin.revokeAccess();
-                if(instanciaLogin == null){
-                    Log.i("SCRIPT","instancia login NAO nula ====================================");
-                }else{
-                    Log.i("SCRIPT","instancia login NULA ========================================");
-                }
-                break;
+//            case R.id.btRevokeAccessMaps:
+//                instanciaLogin.revokeAccess();
+//                if(instanciaLogin == null){
+//                    Log.i("SCRIPT","instancia login NAO nula ====================================");
+//                }else{
+//                    Log.i("SCRIPT","instancia login NULA ========================================");
+//                }
+//                break;
         }
     }
 
@@ -182,12 +182,12 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
         return true;
     }
 
-    public boolean pesquisarPonto(String ponto){
+    /*public boolean pesquisarPonto(String ponto){
 
         placemarkNegocio.buscarPlace(ponto);
 
         return true;
-    }
+    }*/
 
     private LoginActivity instanciaLogin = new LoginActivity();
 
@@ -253,7 +253,11 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
         public boolean onQueryTextSubmit(String query) {
             Log.i("Script", "onQueryTextSubmit " + query);
             LatLng coord;
-            coord = placemarkNegocio.buscarPlace(query);
+            //coord = placemarkNegocio.buscarPlace(query);
+            Placemark place;
+            place = placemarkDAO.buscarPlacemarkPorName(query);
+            Log.i("script", "testando=============== ");
+            coord = place.getCoordinates();
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
                     new LatLng(coord.latitude, coord.longitude), 15));
             return false;

@@ -4,8 +4,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
-import com.google.android.gms.maps.model.LatLng;
 import com.mpoo.ruralmaps.ruralmaps.Placemark;
 
 import java.util.ArrayList;
@@ -61,6 +61,8 @@ public class PlacemarkDAO {
         return placemarks;
     }
 
+
+
     public long salvarPlacemarkDAO(Placemark placemark){
         database = databaseHelper.getWritableDatabase();
         ContentValues valores = new ContentValues();
@@ -82,16 +84,20 @@ public class PlacemarkDAO {
                 "_id = ?", new String[]{Integer.toString(id)}) > 0;
     }
 
-    public LatLng buscarPlacemarkPorName(String name){
+    public Placemark buscarPlacemarkPorName(String name){
+        Placemark placemarks = new Placemark();
+        Log.i("script", "placemark pequisado " + name);
         Cursor cursor = getDatabase().query(DatabaseHelper.Placemarks.TABELA,
-                DatabaseHelper.Placemarks.COLUNAS,"name = ?",new String[]{name}, null, null, null);
-        if (cursor.moveToNext()){
-            Placemark negocio = criarPlacemark(cursor);
-            LatLng coordenadas = negocio.getCoordinates();
-            cursor.close();
-            return coordenadas;
-        }
-        return null;
+                DatabaseHelper.Placemarks.COLUNAS, "name = ?", new String[]{name}, null, null, null);
+        //se encontou
+        if (cursor.getCount() > 0) {
+            Placemark p = new Placemark();
+            //posiciona o primeiro resultado
+            cursor.moveToFirst();
+            p.setName(cursor.getString(1));
+            Log.i("script", "testando cursor========= " + p);
+
+        } return placemarks;
     }
     public Placemark buscarPlacemarkPorDescription(String description){
         Cursor cursor = getDatabase().query(DatabaseHelper.Placemarks.TABELA,
