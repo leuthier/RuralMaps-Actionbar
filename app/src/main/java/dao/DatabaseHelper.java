@@ -18,11 +18,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //tabela de usuarios
         db.execSQL("create table usuario(_id integer primary key autoincrement, "
-                + "nome text not null, login text not null, senha text not null, email text not null)");
+                + "login text not null, senha text not null)");
 
         //tabela de Pessoas
         db.execSQL("create table pessoa(_id integer primary key autoincrement,"
-                + "pessoa text not null, dt_criacao text , dt_completado text)");
+                + "nome text not null, email text not null)");
 
         //tabela placemark
         db.execSQL("create table placemark(_id integer primary key autoincrement,"
@@ -30,7 +30,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 + "latitude real, longitude real)");
 
         //cadastrar usuario Admin
-        db.execSQL("insert into usuario(nome, login, senha, email) values('Admin','admin', '123456','admin@hotmail.com.br')");
+        db.execSQL("insert into usuario(login, senha) values('admin', '123456')");
+        db.execSQL("insert into pessoa(nome, email) values('Admin', 'admin@gmail.com')");
 
         //cadastrar placemark
         db.execSQL("insert into placemark(name, description, iconid, latitude, longitude)"
@@ -49,25 +50,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static class Usuarios {
         public static final String TABELA = "usuario";
         public static final String _ID = "_id";
-        public static final String NOME = "nome";
+//        public static final String NOME = "nome";
         public static final String LOGIN = "login";
         public static final String SENHA = "senha";
-        public static final String EMAIL = "email";
+//        public static final String EMAIL = "email";
 
         public static final String[] COLUNAS = new String[]{
-                _ID, NOME, LOGIN, SENHA, EMAIL
+                _ID, LOGIN, SENHA
         };
     }
 
     public static class Pessoas {
-        public static final String TABELA = "pessoas";
+        public static final String TABELA = "pessoa";
         public static final String _ID = "_id";
-        public static final String PESSOA = "pessoa";
-        public static final String DT_CRIACAO = "dt_criacao";
-        public static final String DT_COMPLETADO = "dt_completado";
+        public static final String NOME = "nome";
+        public static final String EMAIL = "email";
 
         public static final String[] COLUNAS = new String[]{
-                _ID, PESSOA, DT_CRIACAO, DT_COMPLETADO
+                _ID, NOME, EMAIL
         };
     }
 

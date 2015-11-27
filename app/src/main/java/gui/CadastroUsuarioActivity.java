@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.mpoo.ruralmaps.ruralmaps.Pessoa;
 import com.mpoo.ruralmaps.ruralmaps.R;
 import com.mpoo.ruralmaps.ruralmaps.Usuario;
 
@@ -33,6 +34,7 @@ public class CadastroUsuarioActivity extends Activity implements View.OnClickLis
     private String email;
     private UsuarioNegocio userNegocio = UsuarioNegocio.getInstancia();
     private static Context context;
+    private Pessoa pessoa;
 
 
     @Override
@@ -71,12 +73,13 @@ public class CadastroUsuarioActivity extends Activity implements View.OnClickLis
     private void cadastrar() {
         if (validarCamposCadastro()) {
             usuario = new Usuario();
-            usuario.setNome(nome);
+            pessoa =  new Pessoa();
+            pessoa.setNome(nome);
             usuario.setLogin(login);
             usuario.setSenha(senha);
-            usuario.setEmail(email);
+            pessoa.setEmail(email);
             if (UsuarioNegocio.validarDadosCadastro(usuario, usuarioDAO)) {
-                if (UsuarioNegocio.validarEmail(usuario, usuarioDAO)) {
+                if (UsuarioNegocio.validarEmail(pessoa, usuarioDAO)) {
                     long resultado = usuarioDAO.salvarUsuario(usuario);
 
                     if (resultado == -1) {

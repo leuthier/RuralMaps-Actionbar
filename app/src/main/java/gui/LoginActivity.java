@@ -31,6 +31,7 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.plus.Plus;
 import com.google.android.gms.plus.model.people.Person;
+import com.mpoo.ruralmaps.ruralmaps.Pessoa;
 import com.mpoo.ruralmaps.ruralmaps.R;
 import com.mpoo.ruralmaps.ruralmaps.Usuario;
 
@@ -337,10 +338,11 @@ public class LoginActivity extends Activity implements View.OnClickListener, Goo
 
     public void cadastrarUsuarioGoogle(String nome,String email, String idGPlus){
         Usuario usuario = new Usuario();
-        usuario.setNome(nome);
+        Pessoa pessoa = new Pessoa();
+        pessoa.setNome(nome);
         usuario.setLogin(email);
         usuario.setSenha(idGPlus);
-        usuario.setEmail(email);
+        pessoa.setEmail(email);
         helper.salvarUsuario(usuario);
         helper.logar(usuario.getLogin(), usuario.getSenha());
     }

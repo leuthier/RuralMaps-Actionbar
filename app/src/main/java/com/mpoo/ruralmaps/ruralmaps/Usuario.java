@@ -9,12 +9,10 @@ public class Usuario {
 
     public Usuario(){}
 
-    public Usuario (Integer id, String nome, String login, String senha, String email){
+    public Usuario (Integer id, String login, String senha){
         this._id = id;
-        this.nome = nome;
         this.login = login;
         this.senha = senha;
-        this.email = email;
     }
 
     public Integer get_id() {
@@ -23,14 +21,6 @@ public class Usuario {
 
     public void set_id(Integer _id) {
         this._id = _id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getLogin() {
@@ -48,11 +38,6 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }
+

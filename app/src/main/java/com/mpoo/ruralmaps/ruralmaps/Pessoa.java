@@ -4,19 +4,16 @@ package com.mpoo.ruralmaps.ruralmaps;
 public class Pessoa {
 
     private Integer _id;
-    private String pessoa;
-    private String dt_criacao;
-    private String dt_completado;
+    private String nome;
+    private String email;
 
-    //oi eu sou goku
 
     public Pessoa(){}
 
-    public Pessoa(Integer id, String pessoa, String dtcriacao, String dtcompletado){
+    public Pessoa(Integer id, String nome, String email){
         this._id = id;
-        this.pessoa = pessoa;
-        this.dt_completado = dtcompletado;
-        this.dt_criacao = dtcriacao;
+        this.nome = nome;
+        this.email = email;
         }
 
     public Integer get_id() {
@@ -27,30 +24,17 @@ public class Pessoa {
         this._id = _id;
     }
 
-    public String getDt_completado() {
-        return dt_completado;
+    public String getNome() { return nome;
     }
 
-    public void setDt_completado(String dt_completado) {
-        this.dt_completado = dt_completado;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getDt_criacao() {
-        return dt_criacao;
+    public String getEmail() {
+        return email;
     }
-
-    public void setDt_criacao(String dt_criacao) {
-        this.dt_criacao = dt_criacao;
+    public void setEmail(String email) {
+        this.email = email;
     }
-
-    public String getPessoa() {
-        return pessoa;
-    }
-
-    public void setPessoa(String pessoa) {
-        this.pessoa = pessoa;
-    }
-
 }
-
-//testando gleydson araujo

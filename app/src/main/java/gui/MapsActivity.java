@@ -68,14 +68,15 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
                     testButton.setText("Satelite");
                     v.setTag(1);
                 }
-        //Informaçoes do transito em tempo real
-        mMap.setTrafficEnabled(true);
-        //mMap.addPolyline();
             }
         });
 
         Button revogarAccess = (Button) findViewById(R.id.btRevokeAccessMaps);
         revogarAccess.setOnClickListener(this);
+
+        //Informaçoes do transito em tempo real
+        mMap.setTrafficEnabled(true);
+        //mMap.addPolyline();
     }
     @Override
     public void onClick(View v) {
@@ -164,7 +165,8 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
         for (Placemark ponto : lista){
             Log.i("Script", "========================================== placemarks " + ponto);
             placemarkDAO.salvarPlacemarkDAO(ponto);
-        }started = 1;
+        }
+        started = 1;
     }
 
     public void enviarPonto(Placemark place){

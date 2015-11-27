@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import com.mpoo.ruralmaps.ruralmaps.Pessoa;
 import com.mpoo.ruralmaps.ruralmaps.Usuario;
 
 import java.util.ArrayList;
@@ -40,10 +41,17 @@ public class UsuarioDAO {
     private Usuario criarUsuario(Cursor cursor){
         Usuario negocio = new Usuario(
             cursor.getInt(cursor.getColumnIndex(DatabaseHelper.Usuarios._ID)),
-            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.NOME)),
             cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.LOGIN)),
-            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.SENHA)),
-            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.EMAIL))
+            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Usuarios.SENHA))
+        );
+        return negocio;
+    }
+
+    private Pessoa criarPessoa(Cursor cursor){
+        Pessoa negocio = new Pessoa(
+            cursor.getInt(cursor.getColumnIndex(DatabaseHelper.Pessoas._ID)),
+            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.NOME)),
+            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.EMAIL))
         );
         return negocio;
     }
@@ -64,10 +72,10 @@ public class UsuarioDAO {
     public long salvarUsuario(Usuario usuario){
         database = databaseHelper.getWritableDatabase();
         ContentValues valores = new ContentValues();
-        valores.put(DatabaseHelper.Usuarios.NOME, usuario.getNome());
+//        valores.put(DatabaseHelper.Pessoas.NOME, usuario.getNome());
         valores.put(DatabaseHelper.Usuarios.LOGIN, usuario.getLogin());
         valores.put(DatabaseHelper.Usuarios.SENHA, usuario.getSenha());
-        valores.put(DatabaseHelper.Usuarios.EMAIL, usuario.getEmail());
+//        valores.put(DatabaseHelper.Pessoas.EMAIL, usuario.getEmail());
 
         if (usuario.get_id() != null){
             return getDatabase().update(DatabaseHelper.Usuarios.TABELA, valores, "_id = ?",
@@ -91,12 +99,14 @@ public class UsuarioDAO {
         }
         return null;
     }
-    public Usuario buscarUsuarioPorEmail(String email){
-        Cursor cursor = getDatabase().query(DatabaseHelper.Usuarios.TABELA,
-                DatabaseHelper.Usuarios.COLUNAS,"EMAIL = ?",new String[]{email}, null, null, null);
+
+    public Pessoa buscarUsuarioPorEmail(String email){
+        Cursor cursor = getDatabase().query(DatabaseHelper.Pessoas.TABELA,
+                DatabaseHelper.Pessoas.COLUNAS,"email = ?",new String[]{email}, null, null, null);
 
         if (cursor.moveToNext()){
-            Usuario negocio = criarUsuario(cursor);
+            Pessoa negocio = new Pessoa();
+            negocio = criarPessoa(cursor);
             cursor.close();
             return negocio;
         }

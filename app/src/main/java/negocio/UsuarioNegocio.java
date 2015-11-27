@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.mpoo.ruralmaps.ruralmaps.Pessoa;
 import com.mpoo.ruralmaps.ruralmaps.R;
 import com.mpoo.ruralmaps.ruralmaps.Usuario;
 
@@ -28,10 +29,11 @@ public class UsuarioNegocio {
         return instancia;
     }
     private UsuarioDAO usuarioDao = UsuarioDAO.getInstancia();
+    private Pessoa pessoa;
 
 
-    public static boolean validarEmail(Usuario user, UsuarioDAO usuarioDao){
-        String email = user.getEmail();
+    public static boolean validarEmail(Pessoa pessoa, UsuarioDAO usuarioDao){
+        String email = pessoa.getEmail();
         boolean isEmailIdValid = false;
         if (email != null && email.length() > 0) {
             String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
@@ -62,10 +64,11 @@ public class UsuarioNegocio {
 
     public void cadastrarUsuarioGoogle(String nome,String email, String idGPlus){
         usuario = new Usuario();
-        usuario.setNome(nome);
+        pessoa = new Pessoa();
+        pessoa.setNome(nome);
         usuario.setLogin(email);
         usuario.setSenha(idGPlus);
-        usuario.setEmail(email);
+        pessoa.setEmail(email);
         usuarioDAO.salvarUsuario(usuario);
         logarUsuario(usuario.getLogin(),usuario.getSenha());
     }

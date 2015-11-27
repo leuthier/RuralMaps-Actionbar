@@ -28,9 +28,8 @@ public class PessoaDAO {
     private Pessoa criarPessoa(Cursor cursor){
         Pessoa negocio = new Pessoa(
                 cursor.getInt(cursor.getColumnIndex(DatabaseHelper.Pessoas._ID)),
-                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.PESSOA)),
-                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.DT_CRIACAO)),
-                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.DT_COMPLETADO))
+                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.NOME)),
+                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.EMAIL))
         );
         return negocio;
     }
@@ -48,9 +47,11 @@ public class PessoaDAO {
         return pessoa;
     }
 
+
     public long salvarPessoa(Pessoa negocio){
         ContentValues valores = new ContentValues();
-        valores.put(DatabaseHelper.Pessoas.PESSOA, negocio.getPessoa());
+        valores.put(DatabaseHelper.Pessoas.NOME, negocio.getNome());
+        valores.put(DatabaseHelper.Pessoas.EMAIL, negocio.getEmail());
 
         if (negocio.get_id() != null){
             return getDatabase().update(DatabaseHelper.Pessoas.TABELA, valores, "_id = ?",
