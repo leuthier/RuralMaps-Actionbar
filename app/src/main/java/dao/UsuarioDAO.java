@@ -51,7 +51,8 @@ public class UsuarioDAO {
         Pessoa negocio = new Pessoa(
             cursor.getInt(cursor.getColumnIndex(DatabaseHelper.Pessoas._ID)),
             cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.NOME)),
-            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.EMAIL))
+            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.EMAIL)),
+            cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.PTS_PESQUISADOS))
         );
         return negocio;
     }

@@ -50,6 +50,7 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        
         setUpMapIfNeeded();
 
         final Button testButton = (Button) findViewById(R.id.Btype);
@@ -74,22 +75,18 @@ public class MapsActivity extends FragmentActivity implements View.OnClickListen
         Button revogarAccess = (Button) findViewById(R.id.btRevokeAccessMaps);
         revogarAccess.setOnClickListener(this);
 
-        //Informaçoes do transito em tempo real
+
         mMap.setTrafficEnabled(true);
-        //mMap.addPolyline();
+
     }
     @Override
     public void onClick(View v) {
         int id = v.getId();
         switch (id) {
             case R.id.btRevokeAccessMaps:
-                instanciaLogin.revokeAccess();
-                if(instanciaLogin == null){
-                    Log.i("SCRIPT","instancia login NAO nula ====================================");
-                }else{
-                    Log.i("SCRIPT","instancia login NULA ========================================");
-                }
-                break;
+//                    instanciaLogin.signOutFromGplus();
+//                    instanciaLogin.revokeAccess();
+            break;
         }
     }
 

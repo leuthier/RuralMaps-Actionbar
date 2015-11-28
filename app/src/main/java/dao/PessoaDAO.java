@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.provider.ContactsContract;
 
 import com.mpoo.ruralmaps.ruralmaps.Pessoa;
 
@@ -29,29 +30,31 @@ public class PessoaDAO {
         Pessoa negocio = new Pessoa(
                 cursor.getInt(cursor.getColumnIndex(DatabaseHelper.Pessoas._ID)),
                 cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.NOME)),
-                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.EMAIL))
+                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.EMAIL)),
+                cursor.getString(cursor.getColumnIndex(DatabaseHelper.Pessoas.PTS_PESQUISADOS))
         );
         return negocio;
     }
 
-    public List<Pessoa> listarTarefa(){
-        Cursor cursor = getDatabase().query(DatabaseHelper.Pessoas.TABELA,
-                DatabaseHelper.Pessoas.COLUNAS, null, null, null, null, null);
-
-        List<Pessoa> pessoa = new ArrayList<Pessoa>();
-        while (cursor.moveToNext()){
-            Pessoa negocio = criarPessoa(cursor);
-            pessoa.add(negocio);
-        }
-        cursor.close();
-        return pessoa;
-    }
+//    public List<Pessoa> listarTarefa(){
+//        Cursor cursor = getDatabase().query(DatabaseHelper.Pessoas.TABELA,
+//                DatabaseHelper.Pessoas.COLUNAS, null, null, null, null, null, null);
+//
+//        List<Pessoa> pessoa = new ArrayList<Pessoa>();
+//        while (cursor.moveToNext()){
+//            Pessoa negocio = criarPessoa(cursor);
+//            pessoa.add(negocio);
+//        }
+//        cursor.close();
+//        return pessoa;
+//    }
 
 
     public long salvarPessoa(Pessoa negocio){
         ContentValues valores = new ContentValues();
         valores.put(DatabaseHelper.Pessoas.NOME, negocio.getNome());
         valores.put(DatabaseHelper.Pessoas.EMAIL, negocio.getEmail());
+        valores.put(DatabaseHelper.Pessoas.PTS_PESQUISADOS,negocio.getPts_pesquisados());
 
         if (negocio.get_id() != null){
             return getDatabase().update(DatabaseHelper.Pessoas.TABELA, valores, "_id = ?",
